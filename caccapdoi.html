@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách cặp đôi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/caccapdoi.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll('.grid-container .card'); // Chọn tất cả thẻ card
+  const cardsPerPage = 6; // Mỗi trang chỉ hiển thị 6 card (2 hàng x 3 cột)
+  let currentPage = 1;
+  const totalPages = Math.ceil(cards.length / cardsPerPage); // Tổng số trang
+
+  // Hàm hiển thị các card theo trang
+  function showPage(page) {
+    const start = (page - 1) * cardsPerPage; // Tính chỉ số đầu tiên của card trong trang
+    const end = start + cardsPerPage; // Tính chỉ số cuối cùng của card trong trang
+
+    cards.forEach((card, index) => {
+      if (index >= start && index < end) {
+        card.style.display = 'block'; // Hiển thị card nếu nó thuộc phạm vi của trang
+      } else {
+        card.style.display = 'none'; // Ẩn card nếu nó không thuộc phạm vi của trang
+      }
+    });
+
+    document.getElementById('pageInfo').textContent = `${page} / ${totalPages}`; // Hiển thị thông tin trang
+  }
+
+  // Nút "Trước" chuyển về trang trước
+  document.getElementById('prevPage').addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--; // Giảm trang hiện tại
+      showPage(currentPage); // Hiển thị lại các card của trang mới
+    }
+  });
+
+  // Nút "Sau" chuyển sang trang tiếp theo
+  document.getElementById('nextPage').addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++; // Tăng trang hiện tại
+      showPage(currentPage); // Hiển thị lại các card của trang mới
+    }
+  });
+
+  // Hiển thị trang đầu tiên khi trang web được tải
+  showPage(currentPage);
+});
+
+  </script>
+
+  
+  <!-- Header -->
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.jpg" alt="logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="nhancuoi.html">Nhẫn cưới</a></li>
+          <li><a href="thietkeleduong.html">Thiết kế lễ đường</a></li>
+          <li><a href="trangphuccuoi.html">Trang phục cưới</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/video/ccd.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <h2>Danh sách cặp đôi đã chọn chúng tôi</h2>
+      <p>Đã có hơn 80,000 cặp đôi tin dùng, bạn còn chần chờ gì nữa?</p>
+    </div>
+  </section>
+
+  <!-- Couples Grid -->
+  <section class="grid-container">
+    <!-- 12 Cards -->
+    <div class="card">
+      <img src="assets/img/doanh/anhccd1.png" alt="Couple 1" />
+      <div class="card-text">
+        <h3>Minh Trung & Ánh Ngọc</h3>
+        <p>Wedding date:<br/>04-05-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd2.png" alt="Couple 2" />
+      <div class="card-text">
+        <h3>Tuấn Hùng & Hoàng Na</h3>
+        <p>Wedding date:<br/>14-06-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd3.png" alt="Couple 3" />
+      <div class="card-text">
+        <h3>Minh Triết & Thụy Tiên</h3>
+        <p>Wedding date:<br/>18-01-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd4.png" alt="Couple 4" />
+      <div class="card-text">
+        <h3>Lê Vũ & Thanh Thảo</h3>
+        <p>Wedding date:<br/>04-05-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd5.png" alt="Couple 5" />
+      <div class="card-text">
+        <h3>Nhật Linh & Phương Thúy</h3>
+        <p>Wedding date:<br/>04-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd6.png" alt="Couple 6" />
+      <div class="card-text">
+        <h3>Văn Trung & Anh Thư</h3>
+        <p>Wedding date:<br/>18-01-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd7.png" alt="Couple 7" />
+      <div class="card-text">
+        <h3>Khánh Tùng & Thu Hằng</h3>
+        <p>Wedding date:<br/>09-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd8.png" alt="Couple 8" />
+      <div class="card-text">
+        <h3>Đức Trọng & Ánh Diệu</h3>
+        <p>Wedding date:<br/>13-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd9.png" alt="Couple 9" />
+      <div class="card-text">
+        <h3>Anh Quang & Phương Dung</h3>
+        <p>Wedding date:<br/>12-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd10.png" alt="Couple 10" />
+      <div class="card-text">
+        <h3>Minh Tân & Thanh Tâm</h3>
+        <p>Wedding date:<br/>14-06-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd11.png" alt="Couple 11" />
+      <div class="card-text">
+        <h3>Văn Hướng & Thu Phương</h3>
+        <p>Wedding date:<br/>05-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd12.png" alt="Couple 12" />
+      <div class="card-text">
+        <h3>Đức Hiển & Thúy Trang</h3>
+        <p>Wedding date:<br/>12-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd1.png" alt="Couple 13" />
+      <div class="card-text">
+        <h3>Minh Trung & Ánh Ngọc</h3>
+        <p>Wedding date:<br/>04-05-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd2.png" alt="Couple 23" />
+      <div class="card-text">
+        <h3>Tuấn Hùng & Hoàng Na</h3>
+        <p>Wedding date:<br/>14-06-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd3.png" alt="Couple 33" />
+      <div class="card-text">
+        <h3>Minh Triết & Thụy Tiên</h3>
+        <p>Wedding date:<br/>18-01-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd4.png" alt="Couple 43" />
+      <div class="card-text">
+        <h3>Lê Vũ & Thanh Thảo</h3>
+        <p>Wedding date:<br/>04-05-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd5.png" alt="Couple 53" />
+      <div class="card-text">
+        <h3>Nhật Linh & Phương Thúy</h3>
+        <p>Wedding date:<br/>04-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd6.png" alt="Couple 63" />
+      <div class="card-text">
+        <h3>Văn Trung & Anh Thư</h3>
+        <p>Wedding date:<br/>18-01-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd7.png" alt="Couple 73" />
+      <div class="card-text">
+        <h3>Khánh Tùng & Thu Hằng</h3>
+        <p>Wedding date:<br/>09-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd8.png" alt="Couple 83" />
+      <div class="card-text">
+        <h3>Đức Trọng & Ánh Diệu</h3>
+        <p>Wedding date:<br/>13-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd9.png" alt="Couple 93" />
+      <div class="card-text">
+        <h3>Anh Quang & Phương Dung</h3>
+        <p>Wedding date:<br/>12-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd10.png" alt="Couple 103" />
+      <div class="card-text">
+        <h3>Minh Tân & Thanh Tâm</h3>
+        <p>Wedding date:<br/>14-06-2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd11.png" alt="Couple 113" />
+      <div class="card-text">
+        <h3>Văn Hướng & Thu Phương</h3>
+        <p>Wedding date:<br/>05-04-2025</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/doanh/anhccd12.png" alt="Couple 12" />
+      <div class="card-text">
+        <h3>Đức Hiển & Thúy Trang</h3>
+        <p>Wedding date:<br/>12-04-2025</p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="pagination">
+    <button id="prevPage">←</button>
+    <span id="pageInfo">1 / ?</span>
+    <button id="nextPage">→</button>
+  </div>
+  
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col footer-about">
+        <div class="logo-box">
+          <a href="#">
+            <img src="assets/img/logo.jpg" alt="Logo" class="logo">
+          </a>
+        </div>
+        <p class="desc">
+          Việc chuẩn bị cho ngày trọng đại trở nên dễ dàng hơn bao giờ hết. Chúng tôi cung cấp dịch vụ cưới hỏi chuyên nghiệp, giúp bạn hiện thực hóa mọi ý tưởng và biến giấc mơ cưới trở thành hiện thực.
+        </p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fas fa-paper-plane"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Công ty</h4>
+        <hr>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tính năng</a></li>
+          <li><a href="#">Bảng giá</a></li>
+          <li><a href="#">Tin tức mới nhất</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ</h4>
+        <hr>
+        <ul>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Điều khoản & Điều kiện</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Liên hệ chúng tôi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col contact">
+        <h4>Liên hệ</h4>
+        <hr>
+        <ul>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>&nbsp;
+            <a href="https://www.google.com/maps/search/123+Cưới+Hỏi+St,+TP.HCM" target="_blank">
+              123 Cưới Hỏi St, TP.HCM
+            </a>
+          </li>
+          
+          <li>
+            <i class="fas fa-envelope"></i>&nbsp;
+            <a href="mailto:contact@gmail.com"> contact@gmail.com</a>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>&nbsp;
+            <a href="tel:0999999999" class="phone-link"> 0999.999.999</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright">
+      © 2025 DDH. Thiết kế bởi webdesign.gdn
+    </div>
+  </footer>
+
+</body>
+</html>

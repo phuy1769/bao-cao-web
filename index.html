@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="assets/css/trangchu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- Thanh menu -->
+  <div class="menu">
+    <a href="#">
+      <img src="assets/img/logo.jpg" alt="Logo" class="logo">
+    </a>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="dichvu.html">Dịch vụ</a>
+      <a href="#danh-gia">Đánh giá</a>
+      <a href="#1" class="btn-dang-ky" id="show-form-btn">Đăng ký tư vấn</a>
+    </nav>
+  </div>
+
+  <!-- Phần hero với video nền và form -->
+  <section class="hero" id="1">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/video/backgroudtranggchu.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-left" id="hero-left">
+        <img src="assets/img/logo.jpg" alt="Logo" class="logo">
+        <h1 class="main-title">Nền Tảng Cưới Hỏi Thế Hệ Mới</h1>
+        <p class="subtitle">Cho đám cưới trở nên độc đáo hơn theo phong cách riêng của bạn</p>
+      </div>    
+      <div class="hero-right" id="hero-right">
+        <form class="form-dang-ky" id="form-dang-ky">
+          <h2>Đăng ký tư vấn miễn phí</h2>
+          <p class="form-note">Chúng tôi sẽ liên hệ để hỗ trợ bạn lên kế hoạch cưới hoàn hảo nhất!</p>
+          <input type="text" placeholder="Nhập tên khách hàng" id="name" required>
+          <input type="text" placeholder="Nhập số điện thoại hoặc email" required>
+          <input type="text" placeholder="Nhập địa điểm tổ chức sự kiện" required>
+          <input type="text" id="event-date" placeholder="Ngày tổ chức dự kiến" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" required>
+          <button type="submit">Đăng ký ngay</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần 3 dịch vụ: kế hoạch, ngân sách, khách mời -->
+  <section class="dich-vu-3">
+    <div class="box">
+      <img src="assets/img/doanh/quanlykehoach.png" alt="Ảnh kế hoạch">
+      <h3 class="box-title">Quản lý kế hoạch</h3>
+      <p class="box-desc">
+        Tạo và theo dõi công việc cho ngày trọng đại của bạn, đảm bảo mọi thứ theo kế hoạch, cho đám cưới của bạn được vẹn toàn
+      </p>
+    </div>
+    <div class="box">
+      <img src="assets/img/doanh/quanlyngansach.png" alt="Ảnh ngân sách">
+      <h3 class="box-title">Quản lý ngân sách</h3>
+      <p class="box-desc">
+        Lập kế hoạch tài chính chi tiết và quản lý chi tiêu một cách thông minh. Tận hưởng ngày đặc biệt mà không cần lo lắng về tài chính
+      </p>
+    </div>
+    <div class="box">
+      <img src="assets/img/doanh/quanlykhachmoi.png" alt="Ảnh khách mời">
+      <h3 class="box-title">Quản lý khách mời</h3>
+      <p class="box-desc">
+        Lên danh sách và quản lý thông tin khách mời giúp dễ dàng xác định được số lượng người tham dự, và lưu trữ thông tin
+      </p>
+    </div>
+  </section>
+
+  <!-- Dịch vụ nổi bật -->
+  <section class="dich-vu-noi-bat">
+    <h4>Đầy đủ những dịch vụ nổi bật</h4>
+    <h2>cho một bữa tiệc như Mơ</h2>
+    <div class="content">
+      <div class="anh">
+        <img src="assets/img/doanh/anhdvnb.png" alt="Ảnh dịch vụ nổi bật">
+      </div>
+      <div class="text">
+        <div class="item">
+          <img src="assets/img/icon/iconmayanh.png" alt="icon máy ảnh" class="icon">
+          <p>Lưu giữ khoảnh khắc hạnh phúc với bộ ảnh cưới chuyên nghiệp, đầy ấn tượng.</p>
+        </div>
+        <div class="item">
+          <img src="assets/img/icon/iconcapdoi.png" alt="icon cặp đôi" class="icon">
+          <p>Khám phá những mẫu váy cưới lộng lẫy và vest chú rể sang trọng, phù hợp với phong cách của bạn.</p>
+        </div>
+        <div class="item">
+          <img src="assets/img/icon/iconnhan.png" alt="icon nhẫn cưới" class="icon">
+          <p>Lựa chọn cặp nhẫn hoàn hảo, biểu tượng cho tình yêu vĩnh cửu.</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn-thamkhao">Tham khảo ngay <span>→</span></button>
+  </section>
+
+  <section class="gioi-thieu">
+    <div class="gioi-thieu-box">
+      <p>Trang web giúp bạn thể hiện đầy đủ thông tin về ngày trọng đại, bao gồm sự kiện cưới, thông tin cô dâu – chú rể, chuyện tình yêu và album ảnh cưới. Chia sẻ khoảnh khắc hạnh phúc với bạn bè và người thân một cách dễ dàng.</p>
+      <p>Đã có hơn <span class="highlight">80,000</span> cặp đôi tin dùng, bạn còn chần chờ gì nữa?</p>
+      <a href="caccapdoi.html"><button class="btn-gioi-thieu">Xem các cặp đôi →</button></a>
+    </div>
+  </section>
+
+  <section class="cac-dich-vu">
+    <h2 class="tieu-de">Dịch Vụ</h2>
+    <p class="mo-ta">
+      Chúng tôi cung cấp các dịch vụ cưới hỏi hiện đại, giúp bạn biến giấc mơ thành hiện thực một cách dễ dàng.
+      Từ việc lên kế hoạch, lựa chọn trang phục, chụp ảnh cưới cho đến tổ chức tiệc – tất cả đều được thực hiện
+      chỉn chu, chuyên nghiệp và đầy cảm xúc. Hãy để chúng tôi đồng hành cùng bạn trong ngày trọng đại!
+    </p>
+    <div class="dich-vu-grid">
+      <div class="dich-vu-item">
+        <img src="assets/img/doanh/anhtcdv.png" alt="Thiết kế bữa tiệc" />
+        <div class="noi-dung">
+          <p>Thiết kế bữa tiệc theo nhiều phong cách</p>
+        </div>
+      </div>
+      <div class="dich-vu-item">
+        <img src="assets/img/doanh/anhtcdv2.png" alt="Trang phục cưới" />
+        <div class="noi-dung">
+          <p>Nhiều kiểu mẫu trang phục phù hợp cho cô dâu và chú rể</p>
+        </div>
+      </div>
+    </div>
+    <a href="dichvu.html">
+      <div class="nut-tham-khao">
+        <button>Tham khảo ngay →</button>
+      </div>
+    </a>
+  </section>
+
+  <!-- Đánh giá tiêu biểu -->
+  <section class="danh-gia" id="danh-gia">
+    <h2 class="tieu-de">Đánh giá tiêu biểu</h2>
+    <div class="slider">
+      <div class="testimonial-box active">
+        <img class="avatar" src="assets/img/doanh/anhtr-dgnb.png" alt="Khách hàng 1" />
+        <p class="testimonial-text">
+          Đội ngũ hỗ trợ tư vấn tận tình, mình thử nhiều mẫu và cuối cùng chọn được một bộ áo cưới đỏ truyền thống đúng ý – vừa đẹp vừa ý nghĩa.
+        </p>
+      </div>
+      <div class="testimonial-box">
+        <img class="avatar" src="assets/img/doanh/anhtr-dgnb.png" alt="Khách hàng 2" />
+        <p class="testimonial-text">
+          Dịch vụ trang trí bữa tiệc quá tuyệt vời! Không gian cực kỳ lãng mạn và đúng phong cách mình mong muốn.
+        </p>
+      </div>
+      <div class="testimonial-box">
+        <img class="avatar" src="assets/img/doanh/anhtr-dgnb.png" alt="Khách hàng 3" />
+        <p class="testimonial-text">
+          Mình rất ấn tượng với cách làm việc chuyên nghiệp của đội ngũ – từ thử đồ, make up đến buổi chụp ảnh cưới đều chỉn chu!
+        </p>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active" onclick="changeSlide(0)"></span>
+      <span class="dot" onclick="changeSlide(1)"></span>
+      <span class="dot" onclick="changeSlide(2)"></span>
+    </div>
+  </section>
+
+  <!-- Tại sao nên chọn -->
+  <section class="tai-sao">
+    <p class="subtitle">Tại sao nên chọn</p>
+    <h2 class="title">Dịch Vụ Cưới Hỏi Hiện Đại?</h2>
+    <div class="uu-diem">
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao1.png" alt="Dịch vụ cá nhân hoá">
+        <h3>Dịch vụ cưới cá nhân hóa theo xu hướng mới</h3>
+        <p>Đáp ứng xu hướng cưới mới nhất, dịch vụ của chúng tôi linh hoạt để phù hợp cá tính và mong muốn của bạn.</p>
+      </div>
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao2.png" alt="Trọn gói tiết kiệm">
+        <h3>Trọn gói – Tiện lợi – Tiết kiệm thời gian</h3>
+        <p>Cung cấp dịch vụ từ A-Z, tiết kiệm thời gian và công sức cho bạn mà vẫn đảm bảo mọi thứ hoàn hảo nhất.</p>
+      </div>
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao3.png" alt="Không gian đa dạng">
+        <h3>Không gian tiệc cưới đẳng cấp, đa dạng phong cách</h3>
+        <p>Không gian cưới phong cách hiện đại, từ trong nhà đến ngoài trời, phù hợp với sở thích cá nhân.</p>
+      </div>
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao4.png" alt="Kế hoạch chuyên nghiệp">
+        <h3>Quản lý kế hoạch cưới dễ dàng, chuyên nghiệp</h3>
+        <p>Hỗ trợ lập danh sách khách mời, chọn tiệc, trang phục, ảnh cưới,... giúp đám cưới của bạn mượt mà và không lo lắng.</p>
+      </div>
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao5.png" alt="Trang trí sự kiện">
+        <h3>Dịch vụ trang trí và tổ chức sự kiện cưới hoàn hảo</h3>
+        <p>Biến không gian cưới của bạn thành một câu chuyện tình yêu lung linh, đáng nhớ từng chi tiết.</p>
+      </div>
+      <div class="uu-diem-item">
+        <img src="./assets/img/doanh/taisao6.png" alt="Lưu giữ kỷ niệm">
+        <h3>Nhận lời chúc phúc từ bạn bè và lưu giữ kỷ niệm</h3>
+        <p>Hệ thống hiện đại cho phép khách mời gửi lời chúc và hình ảnh – tạo nên món quà tinh thần đáng quý.</p>
+      </div>
+    </div>
+    <p class="convinced">Đã có hàng ngàn cặp đôi tin tưởng lựa chọn – còn chần chờ gì nữa?</p>
+    <a href="#"><button class="cta-button">Đăng kí tư vấn →</button></a>
+  </section>
+
+  <!-- Liên hệ -->
+  <section class="lien-he">
+    <div class="form-lien-he">
+      <h2>Liên hệ ngay để được hỗ trợ</h2>
+      <p>Để được hỗ trợ nhanh hơn, vui lòng liên hệ với chúng tôi qua Messenger hoặc Zalo.</p>
+      <div class="contact-method">
+        <a href="https://www.messenger.com/" target="_blank">
+          <div class="contact-box">
+            <img src="./assets/img/icon/iconms.png" alt="Messenger">
+            <span>liên hệ qua facebook</span>
+          </div>
+        </a>
+        <a href="https://zalo.me/" target="_blank">
+          <div class="contact-box">
+            <img src="./assets/img/icon/iconzl.png" alt="Zalo">
+            <span>liên hệ qua zalo</span>
+          </div>
+        </a>
+      </div>
+      <p class="note">Đừng ngần ngại liên hệ với chúng tôi khi bạn có bất kỳ thắc mắc nào!</p>
+    </div>
+  </section>
+
+  <!-- Nút quay lại đầu trang -->
+  <button class="back-to-top" id="backToTop">↑</button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col footer-about">
+        <div class="logo-box">
+          <a href="#">
+            <img src="assets/img/logo.jpg" alt="Logo" class="logo">
+          </a>
+        </div>
+        <p class="desc">
+          Việc chuẩn bị cho ngày trọng đại trở nên dễ dàng hơn bao giờ hết. Chúng tôi cung cấp dịch vụ cưới hỏi chuyên nghiệp, giúp bạn hiện thực hóa mọi ý tưởng và biến giấc mơ cưới trở thành hiện thực.
+        </p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fas fa-paper-plane"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Công ty</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tính năng</a></li>
+          <li><a href="#">Bảng giá</a></li>
+          <li><a href="#">Tin tức mới nhất</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Địa chỉ: 123 Cưới Hỏi St, TP.HCM</li>
+          <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d14131b123d191915530b13">[email&#160;protected]</a></li>
+          <li>Điện thoại: 0123 456 789</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright">
+      © 2025 DDH. Thiết kế bởi webdesign.gdn
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for sliding animation
+    document.addEventListener("DOMContentLoaded", () => {
+      const showFormBtn = document.getElementById("show-form-btn");
+      const heroLeft = document.getElementById("hero-left");
+      const heroRight = document.getElementById("hero-right");
+
+      // Initially hide the form
+      heroRight.classList.add("hidden");
+
+      showFormBtn.addEventListener("click", () => {
+        // Toggle classes for animation
+        heroLeft.classList.toggle("slide-left");
+        heroRight.classList.toggle("hidden");
+      });
+    });
+
+    // Existing testimonial slider code
+    const testimonials = document.querySelectorAll(".testimonial-box");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+    let autoSlideInterval;
+    const slideDuration = 3000;
+    const transitionDelay = 1800;
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial) => {
+        testimonial.classList.remove("active");
+      });
+      dots.forEach((dot) => {
+        dot.classList.remove("active");
+      });
+      testimonials[index].classList.add("active");
+      dots[index].classList.add("active");
+    }
+
+    function changeSlide(index) {
+      currentIndex = index;
+      showTestimonial(currentIndex);
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        setTimeout(() => {
+          showTestimonial(currentIndex);
+        }, transitionDelay);
+      }, slideDuration);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showTestimonial(currentIndex);
+      startAutoSlide();
+    });
+  </script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
